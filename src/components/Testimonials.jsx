@@ -27,21 +27,20 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white py-24 sm:py-32 overflow-hidden">
+    <section className="px-6 bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white py-32 overflow-hidden">
       <div className="max-w-6xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="text-3xl sm:text-4xl md:text-5xl font-bold mb-16 flex justify-center items-center gap-3 flex-wrap"
+          className="text-3xl sm:text-4xl font-bold mb-20 flex justify-center items-center gap-2"
         >
-          What People
-          <HeartIcon className="w-8 h-8 sm:w-10 sm:h-10 text-red-500" />
-          About Us
+            What People{" "}
+            <HeartIcon className="w-10 h-14 text-red-500 inline-block" /> About Us
         </motion.h2>
 
-        <div className="flex flex-wrap justify-center gap-8 md:gap-10">
+        <div className="flex flex-wrap justify-center gap-10">
           {testimonials.map((t, index) => (
             <motion.div
               key={index}
@@ -51,16 +50,18 @@ const Testimonials = () => {
               whileHover={{
                 scale: 1.05,
                 rotate: -0.5,
-                transition: { duration: 0.15, ease: "easeOut" },
+                transition: { duration: 0.15, ease: "easeOut" }, 
               }}
               transition={{
-                duration: 0.1,
+                duration: 0.1, 
                 ease: "easeOut",
                 delay: index * 0.15,
               }}
               viewport={{ once: true, amount: 0.2 }}
-              className="bg-[#1e293b] w-full sm:w-[300px] max-w-sm p-6 pt-12 rounded-2xl shadow-xl border border-indigo-500/10 hover:shadow-indigo-500/20 transition-all"
+              className="bg-[#1e293b] relative w-full sm:w-[300px] p-6 pt-12 rounded-2xl shadow-xl border border-indigo-500/10 hover:shadow-indigo-500/20 transition-all"
             >
+
+              {/* Chat icon */}
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -77,11 +78,12 @@ const Testimonials = () => {
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: index * 0.2 + 0.5 }}
                 viewport={{ once: true }}
-                className="text-gray-300 text-sm leading-relaxed italic mb-6"
+                className="text-gray-300 text-[15px] leading-relaxed italic mb-6"
               >
                 “{t.quote}”
               </motion.p>
 
+              {/* Author */}
               <div className="flex items-center gap-4">
                 <motion.img
                   src={t.image}
@@ -102,7 +104,7 @@ const Testimonials = () => {
                     whileInView={{ opacity: 1 }}
                     transition={{ delay: index * 0.2 + 0.7 }}
                     viewport={{ once: true }}
-                    className="font-semibold text-white text-sm"
+                    className="font-semibold text-white"
                   >
                     {t.name}
                   </motion.h4>

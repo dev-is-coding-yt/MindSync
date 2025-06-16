@@ -13,13 +13,13 @@ const stats = [
   {
     icon: <UserGroupIcon className="w-8 h-8 text-indigo-400" />,
     label: "Students Helped",
-    value: 10000,
+    value: 3000000,
     suffix: "+",
   },
   {
     icon: <ClockIcon className="w-8 h-8 text-indigo-400" />,
     label: "Hours Saved",
-    value: 2000000,
+    value: 10000000,
     suffix: "+",
   },
   {
@@ -31,20 +31,20 @@ const stats = [
   {
     icon: <BookOpenIcon className="w-8 h-8 text-indigo-400" />,
     label: "Notes Processed",
-    value: 500000,
+    value: 2500000,
     suffix: "+",
   },
   {
     icon: <DevicePhoneMobileIcon className="w-8 h-8 text-indigo-400" />,
     label: "Mobile Users",
-    value: 7500,
+    value: 2000000,
     suffix: "+",
   },
   {
     icon: <AcademicCapIcon className="w-8 h-8 text-indigo-400" />,
     label: "Institutions Reached",
-    value: 120,
-    suffix: "+",
+    value: 100,
+    suffix: "K",
   },
 ];
 
